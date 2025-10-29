@@ -10,15 +10,16 @@
     --heading-font: 'Crimson Text', serif;
     --text-font: 'Dancing Script', cursive;
 }
+
 /* global reset*/
-*{
-margin: 0;
-padding: 0;
-box-sizing: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
 }
 
 /* body */
-body{
+body {
     font-family: var(--heading-font);
     line-height: 1.6;
     color: var(--accent2-color);
@@ -29,40 +30,50 @@ body{
 }
 
 /* navigation */
-.nav-links{
+.nav-links {
     background-color: var(--accent1-color);
     padding: 1rem 0;
 }
 
-.navigation{
+.navigation {
     display: flex;
     justify-content: center;
     gap: 2rem;
     list-style: none;
 }
 
-.navigation a{
+.navigation a {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
     font-family: var(--heading-font);
     transition: color 0.3s ease;
 }
-.navigation a:hover{
+
+.navigation a:hover {
     color: var(--secondary-color)
 }
+
 /* main content */
-main{
+main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: stretch;
     padding: 2rem;
 }
-.container{
+
+.container {
     display: flex;
-    flex: 1;
+    flex: 2;
     gap: irem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+    border-right: 3px solid var(--accent1-color);
+    border-radius: 10px 0 0 10px;
+    padding: 2rem;
 }
 
 /* left side */
@@ -73,25 +84,32 @@ main{
     padding: 2rem;
     border-radius: 10px;
 }
-.left-side h1, .left-side p {
+
+.left-side h1,
+.left-side p {
     font-family: var(--text-font)
 }
+
 /* right side */
 .right-side {
     flex: 1;
     background-color: var(--accent1-color);
     color: var(--secondary-color);
     padding: 2rem;
-    border-radius: 10px;
-    border-left: 3px solid var(--accent2-color)
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-left: 3px solid var(--accent2-color) */
 }
 
-.right-side h2, .right-side p {
+.right-side h2,
+.right-side p {
     font-family: var(--text-font)
 }
 
 /* footer */
-footer{
+footer {
     background-color: var(--accent2-color);
     color: var(--primary-color);
     text-align: center;
@@ -102,18 +120,22 @@ footer{
 
 /* responsive design */
 @media (max-width: 768px) {
-    .container{
+    .container {
         flex-direction: column;
     }
 
 
-   .left-side,
-   .ride-side{
+    .container {
         flex: none;
         width: 100%;
+        border-right: none;
+        border-bottom: 3px solid var(--accent2-color);
+        border-radius: 10px 10px 0 0;
     }
+
     .right-side {
-        border-left: none;
-        border-top: 3px solid var(--accent2-color)
+        flex: none;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
     }
 }
