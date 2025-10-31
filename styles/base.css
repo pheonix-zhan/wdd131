@@ -1,0 +1,151 @@
+/* ---------- COLOR & FONT VARIABLES ---------- */
+:root {
+  --primary-color: #7DF2CD;
+  /* aquamarine */
+  --secondary-color: #A4DFD8;
+  /* tiffany blue */
+  --accent1-color: #E48577;
+  /* coral pink */
+  --accent2-color: #4E9BAE;
+  /* moonstone */
+  --heading-font: 'Crimson Text', serif;
+  --text-font: 'Dancing Script', cursive;
+}
+
+
+.course-title{
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+/* ---------- NAVIGATION ---------- */
+.nav-links {
+  background-color: var(--accent2-color);
+  padding: 1rem 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navigation a {
+  color: var(--primary-color);
+  flex: 1;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: var(--accent1-color);
+}
+
+/* card section */
+.card-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-wrap: wrap;  /*for smaller screens*/
+}
+
+/* card content */
+.main-layout {
+  display: flex;
+  gap: 2rem; /* space between left and right */
+  align-items: flex-start;
+}
+
+/* Left side (two stacked cards) */
+.left-side {
+  flex: 2; /* take up about twice the width of right side */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Right side (smaller card) */
+.right-card {
+  flex: 1;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.right-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* General card styling (your existing .card styles can stay) */
+.card {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}
+
+.card-inner {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Make it responsive for smaller screens */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .right-card {
+    order: -1; /* optional: move it above or below */
+  }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: var(--accent2-color);
+    color: var(--secondary-color);
+    font-family: var(--text-font);
+    border-top: 4px solid var(--accent1-color);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+footer p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
