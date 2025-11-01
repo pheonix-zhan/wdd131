@@ -17,11 +17,18 @@
 }
 
 header {
-  background-color: var(--secondary-color);
-  padding: 1rem;
-  text-align: center;
-
+  background-color: var(--accent2-color);
+  /* moonstone background */
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  /* stack elements vertically */
+  align-items: center;
+  gap: 1rem;
+  /* space between title and nav */
 }
+
+
 
 main {
   padding: 2rem;
@@ -32,15 +39,25 @@ main {
 .course-title {
   display: block;
   text-align: center;
+  background-color: azure;
+  color: aqua;
   font-size: 2rem;
   font-weight: bold;
   margin: 1rem 0;
+  font-family: var(--heading-font);
+  padding: 1rem 0;
 }
 
 /* ---------- NAVIGATION ---------- */
 .nav-links {
-  background-color: var(--accent2-color);
+  background-color: var(--secondary-color);
   padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* center the nav links horizontally */
+  padding: 0.5rem 0;
+
 }
 
 .navigation {
@@ -48,10 +65,12 @@ main {
   justify-content: center;
   gap: 2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation a {
-  color: #1E7464;
+  color: var(--accent1-color);
   flex: 1;
   text-decoration: none;
   font-weight: 600;
@@ -159,10 +178,10 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 30px 40px;
-  background-color: var(--accent2-color);
-  color: #196460;
+  background-color: var(--primary-color);
+  color: black;
   font-family: var(--text-font);
-  border-top: 4px solid var(--primary-color);
+  border-top: 4px solid var(--trial2-color);
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
 }
