@@ -50,7 +50,7 @@ main {
 
 /* ---------- NAVIGATION ---------- */
 .nav-links {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   padding: 1rem 0;
   width: 100%;
   display: flex;
@@ -70,7 +70,7 @@ main {
 }
 
 .navigation a {
-  color: var(--accent1-color);
+  color: var(--trial-color);
   flex: 1;
   text-decoration: none;
   font-weight: 600;
