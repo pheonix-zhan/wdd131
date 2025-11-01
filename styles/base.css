@@ -8,6 +8,10 @@
   /* coral pink */
   --accent2-color: #4E9BAE;
   /* moonstone */
+  --trial-color: #196460;
+  /* darker teal */
+  --trial2-color: #1E7464;
+  /* darker aqua */
   --heading-font: 'Crimson Text', serif;
   --text-font: 'Dancing Script', cursive;
 }
@@ -47,7 +51,7 @@ main {
 }
 
 .navigation a {
-  color: var(--primary-color);
+  color: #1E7464;
   flex: 1;
   text-decoration: none;
   font-weight: 600;
@@ -156,7 +160,7 @@ footer {
   align-items: center;
   padding: 30px 40px;
   background-color: var(--accent2-color);
-  color: var(--secondary-color);
+  color: #196460;
   font-family: var(--text-font);
   border-top: 4px solid var(--primary-color);
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
