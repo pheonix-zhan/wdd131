@@ -37,15 +37,15 @@ main {
 }
 
 .course-title {
-  display: block;
+  display: block;/* ensures background applies to whole area */
+  background-color: var(--accent1-color);/* coral pink */
+  color: black;
   text-align: center;
-  background-color: azure;
-  color: aqua;
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1rem 0;/* vertical padding */
   font-family: var(--heading-font);
-  padding: 1rem 0;
+
 }
 
 /* ---------- NAVIGATION ---------- */
