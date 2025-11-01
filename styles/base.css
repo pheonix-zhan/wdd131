@@ -12,13 +12,25 @@
   --text-font: 'Dancing Script', cursive;
 }
 
+header {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  text-align: center;
 
-.course-title{
-    display: block;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 1rem 0;
+}
+
+main {
+  padding: 2rem;
+  font-family: var(--heading-font);
+  margin: 1rem;
+}
+
+.course-title {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
 }
 
 /* ---------- NAVIGATION ---------- */
@@ -48,35 +60,42 @@
 }
 
 /* card section */
-.card-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-.card{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    margin: 2rem 0;
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    flex-wrap: wrap;  /*for smaller screens*/
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  /*for smaller screens*/
 }
 
 /* card content */
 .main-layout {
-  display: flex;
-  gap: 2rem; /* space between left and right */
-  align-items: flex-start;
+  display: grid;
+  /* activate css grid*/
+  grid-template-columns: 2fr 1fr;
+  /* left side bigger right side small*/
+  gap: 2rem;
+  /* space btn the grids*/
+  align-items: start;
 }
 
 /* Left side (two stacked cards) */
 .left-side {
-  flex: 2; /* take up about twice the width of right side */
+  flex: 2;
+  /* take up about twice the width of right side */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -87,7 +106,7 @@
   flex: 1;
   background-color: var(--primary-color);
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   text-align: center;
 }
@@ -103,7 +122,7 @@
 .card {
   background-color: var(--primary-color);
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
 }
 
@@ -126,26 +145,25 @@
   }
 
   .right-card {
-    order: -1; /* optional: move it above or below */
+    order: -1;
+    /* optional: move it above or below */
   }
 }
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 40px;
-    background-color: var(--accent2-color);
-    color: var(--secondary-color);
-    font-family: var(--text-font);
-    border-top: 4px solid var(--accent1-color);
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  background-color: var(--accent2-color);
+  color: var(--secondary-color);
+  font-family: var(--text-font);
+  border-top: 4px solid var(--primary-color);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
 }
 
 footer p {
-    font-size: 1rem;
-    font-weight: 500;
+  font-size: 1rem;
+  font-weight: 500;
 }
-
-
