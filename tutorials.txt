@@ -1,0 +1,22 @@
+W3Schools – JavaScript Tutorial
+A straightforward tutorial that covers basics up to modern features, with lots of “Try it Yourself” examples. 
+w3schools.com
+
+freeCodeCamp – “Learn JavaScript – Full Course for Beginners”
+A free course that covers JavaScript fundamentals (conditions, loops, functions, arrays, objects) and more. 
+freecodecamp.org
++1
+
+Codecademy – Introduction to JavaScript
+Interactive lessons where you code in-browser; good if you like learning by doing. 
+Codecademy
++1
+
+Mozilla Developer Network (MDN) – Adding Interactivity with JavaScript
+Focuses on how JS works in the browser with HTML/CSS, events, etc. 
+MDN Web Docs
+
+The Odin Project / “The Modern JavaScript Tutorial” – javascript.info
+A deeper tutorial series with more detailed topics; good once you have basics. 
+javascript.info
++1
