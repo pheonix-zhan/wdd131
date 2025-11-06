@@ -1,17 +1,14 @@
 /* ---------- COLOR & FONT VARIABLES ---------- */
 :root {
-  --primary-color: #7DF2CD;
-  /* aquamarine */
-  --secondary-color: #A4DFD8;
-  /* tiffany blue */
-  --accent1-color: #E48577;
+  --primary-color: #FFC0CB;
+  /* baby pink */
+  --secondary-color: #fff;
+  /* white */
+  --accent1-color: #D3D3D3;
   /* coral pink */
-  --accent2-color: #4E9BAE;
-  /* moonstone */
-  --trial-color: #196460;
-  /* darker teal */
-  --trial2-color: #1E7464;
-  /* darker aqua */
+  --accent2-color: #C08081;
+  /* dusty rose */
+  
   --heading-font: 'Crimson Text', serif;
   --text-font: 'Dancing Script', cursive;
 }
