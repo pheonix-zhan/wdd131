@@ -16,17 +16,22 @@ header
     background-color: #4E9BAE;
 }
 .main{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     display: grid;
     gap: 1rem;
 }
-.header{
-    background-color: black;
-    color: white;
-}
+
 .section{
     padding: 1rem;
     background-color: aliceblue;
 }
 
-@media screen and(min-width: 500px)
+@media screen and(min-width: 500px){
+    header{
+        background-color:black;
+        color: white;
+    }
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
