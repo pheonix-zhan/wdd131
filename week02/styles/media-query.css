@@ -1,13 +1,13 @@
 body{
 --accent2-color: #4E9BAE;
   /* moonstone */
-  --heading-font: 'roboto', san-serif;
+  --heading-font: 'Roboto', san-serif;
   --text-font: 'Dancing Script', cursive;
 }
 
-header
-,main
-,footer{
+header,
+main,
+footer{
     max-width: 640px;
     margin: 1rem auto;
     border-radius: 8px;
@@ -15,18 +15,18 @@ header
     padding: 1rem;
     background-color: #4E9BAE;
 }
-.main{
+main{
     grid-template-columns: 1fr;
     display: grid;
     gap: 1rem;
 }
 
-.section{
+section{
     padding: 1rem;
     background-color: aliceblue;
 }
 
-@media screen and(min-width: 500px){
+@media screen and (min-width: 500px){
     header{
         background-color:black;
         color: white;
