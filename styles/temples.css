@@ -128,15 +128,15 @@ img {
 
 figcaption {
   padding: 0.8rem;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   font-style: italic;
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 
 footer {
   background-color: var(--primary-color);
-  color: var(--accent2-color);
+  color: var(--text-color);
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
