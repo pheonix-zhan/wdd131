@@ -26,3 +26,7 @@ li.append(deleteButton);
 //append the li element variable to the unordered list in your html
 list.append(li);
 
+// creatin click even listener for the add chapter button using an addeventlistener
+button.addEventListener('click', function(){})// code to run when the button is clicked
+
+

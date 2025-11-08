@@ -1,0 +1,118 @@
+:root {
+  --primary-color: #FFC0CB;
+  /* baby pink */
+  --secondary-color: #fff;
+  /* white */
+  --accent1-color: #D3D3D3;
+  /* coral pink */
+  --accent2-color: #C08081;
+  /* dusty rose */
+  
+  --heading-font: 'Crimson Text', serif;
+  --text-font: 'Dancing Script', cursive;
+}
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--text-font);
+    background-color: #D3D3D3;
+    color: #FFC0CB;
+    line-height: 1.6;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #FFC0CB;
+    color: black;
+    padding: 1rem 2rem; 
+}
+
+header p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--heading-font);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem ;
+}
+
+.nav-links a.hover{
+    text-decoration: none;
+    color: #C08081;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    color:black;
+    font-size: 2rem; 
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+figure{
+    background-color: #FFC0CB;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+figure:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgna(0, 0, 0, 0.2);
+}
+
+img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 0.8rem;
+    background-color: #fff;
+    font-style: italic;
+    color: #FFC0CB;
+}
+
+footer{
+    background-color: #FFC0CB;
+    color:#C08081;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
