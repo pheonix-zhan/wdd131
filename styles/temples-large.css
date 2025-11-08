@@ -1,0 +1,30 @@
+@media (min-width: 769px) {
+
+  /* Header layout for desktop */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  /* Hide hamburger on desktop */
+  .hamburger {
+    display: none;
+  }
+
+  /* Show nav horizontally on desktop */
+  .nav-links {
+    display: block !important;
+  }
+
+  .nav-links ul {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  /* Image grid: multiple columns on desktop */
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
