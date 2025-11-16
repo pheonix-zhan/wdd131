@@ -39,7 +39,7 @@ footer p {
 picture {
   width: 100%;
   display: block;
-  position: relative; /* for floating info-cards */
+  position: relative; /* For absolute positioning of cards */
   background-color: var(--accent2-color);
   border-radius: 12px;
   overflow: hidden;
@@ -50,37 +50,47 @@ picture img {
   display: block;
 }
 
-/* ----------------- INFO SECTION ----------------- */
+/* ----------------- INFO CARDS CONTAINER ----------------- */
 .info-cards {
-  display: flex;
-  flex-direction: column; /* Mobile-first: stack vertically (AREA top, WEATHER bottom) */
-  gap: 1.5rem;
-  margin: 0;
-  padding: 1rem;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  z-index: 10;
-  background-color: rgba(211, 211, 211, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: absolute; /* relative to picture */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* let clicks pass outside cards */
 }
 
-/* Individual card styles */
-.area-card,
-.weather-card {
-  background-color: var(--accent1-color); /* Blue background for cards */
+/* ----------------- AREA CARD ----------------- */
+.area-card {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 45%;
+  background-color: var(--accent1-color);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 0 6px rgba(0,0,0,0.15);
   font-family: var(--heading-font);
-  flex: 1; /* Equal width on large screens */
+  pointer-events: auto;
 }
 
-/* Headings */
-.area-card h2,
+/* ----------------- WEATHER CARD ----------------- */
+.weather-card {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 45%;
+  background-color: var(--accent1-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  font-family: var(--heading-font);
+  pointer-events: auto;
+}
+
+/* ----------------- HEADINGS ----------------- */
+.area-card h1,
+.weather-card h2,
 .weather-card h3 {
   background-color: var(--accent2-color);
   color: var(--primary-color);
@@ -107,36 +117,36 @@ picture img {
     font-size: 1.5rem;
   }
 
+  .area-card,
+  .weather-card {
+    position: static;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
   .info-cards {
-    flex-direction: column; /* AREA top, WEATHER bottom */
-    top: 10px;
-    width: 95%;
+    height: auto;
+    top: auto;
+    left: auto;
+    transform: none;
     padding: 0.8rem;
   }
 }
 
 /* ----------------- LARGE SCREEN ----------------- */
 @media (min-width: 1000px) {
-  .info-cards {
-    flex-direction: row; /* AREA left, WEATHER right */
-    justify-content: space-between;
-    width: 80%;
-    top: 40px;
-    padding: 1.5rem;
-  }
-
-  /* Hide the original weather img on large screens */
-  .weather-card img {
-    display: none;
-  }
-
-  /* Add weather icon as pseudo-element after heading (using emoticon) */
+  /* Add weather icon as pseudo-element after heading */
   .weather-card h3::after {
-    content: "\2601"; /* Fixed: Unicode for cloud emoticon for better rendering */
+    content: "\2601"; /* Cloud unicode symbol */
     display: inline-block;
     margin-left: 0.5rem;
     vertical-align: middle;
     font-size: 1.5rem;
-    font-family: sans-serif; /* Ensures emoticon renders */
+    font-family: sans-serif;
+  }
+
+  /* Hide original weather image on large screens */
+  .weather-card img {
+    display: none;
   }
 }
