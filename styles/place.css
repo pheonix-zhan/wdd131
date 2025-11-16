@@ -1,11 +1,11 @@
 /* ----------------- GLOBAL VARIABLES ----------------- */
 :root {
-  --primary-color: #ED1C24;      /* Updated: Red from Thai flag for thematic relevance */
-  --secondary-color: #FFFFFF;    /* Updated: White from Thai flag */
-  --accent1-color: #012169;      /* Updated: Blue from Thai flag */
+  --primary-color: #ED1C24;      /* Red from Thai flag */
+  --secondary-color: #FFFFFF;    /* White from Thai flag */
+  --accent1-color: #012169;      /* Blue from Thai flag */
   --accent2-color: #D3D3D3;      /* Soft gray for contrast */
 
-  --heading-font: 'Crimson Text', serif;  /* Kept your choice; ensure it's applied */
+  --heading-font: 'Crimson Text', serif;
   --text-font: 'Dancing Script', cursive;
 }
 
@@ -27,7 +27,7 @@ footer {
   padding: 1rem;
   font-family: var(--heading-font);
   font-weight: bold;
-  color: var(--secondary-color);  /* Updated: White for better contrast on red background */
+  color: var(--secondary-color);
 }
 
 footer p {
@@ -42,7 +42,7 @@ picture {
   position: relative; /* for floating info-cards */
   background-color: var(--accent2-color);
   border-radius: 12px;
-  overflow: hidden; /* keep cards inside rounded corners */
+  overflow: hidden;
 }
 
 picture img {
@@ -53,37 +53,37 @@ picture img {
 /* ----------------- INFO SECTION ----------------- */
 .info-cards {
   display: flex;
-  flex-direction: column; /* mobile-first */
+  flex-direction: column; /* Mobile-first: stack vertically (AREA top, WEATHER bottom) */
   gap: 1.5rem;
   margin: 0;
   padding: 1rem;
-  position: absolute; /* float on top of hero image */
+  position: absolute;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
   z-index: 10;
-  background-color: rgba(211, 211, 211, 0.9); /* semi-transparent */
+  background-color: rgba(211, 211, 211, 0.9);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Card list styling */
-.info-cards ul {
-  background-color: var(--accent1-color);  /* Updated: Now blue for flag theme */
+/* Individual card styles */
+.area-card,
+.weather-card {
+  background-color: var(--accent1-color); /* Blue background for cards */
   padding: 1rem;
   border-radius: 8px;
-  list-style: none;
-  width: 100%;
   box-shadow: 0 0 6px rgba(0,0,0,0.15);
   font-family: var(--heading-font);
+  flex: 1; /* Equal width on large screens */
 }
 
 /* Headings */
-.info-cards h2,
-.info-cards h3 {
+.area-card h2,
+.weather-card h3 {
   background-color: var(--accent2-color);
-  color: var(--primary-color);  /* Updated: Red for contrast */
+  color: var(--primary-color);
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 6px;
@@ -95,20 +95,20 @@ picture img {
 }
 
 /* Weather image for small screens */
-.info-cards img {
+.weather-card img {
   width: 60px;
   display: block;
   margin: 0 auto 0.5rem;
 }
 
 /* ----------------- MOBILE RESPONSIVE ----------------- */
-@media (max-width: 700px) {  /* Aligned closer to your <picture> breakpoints for consistency */
+@media (max-width: 700px) {
   header {
     font-size: 1.5rem;
   }
 
   .info-cards {
-    flex-direction: column;
+    flex-direction: column; /* AREA top, WEATHER bottom */
     top: 10px;
     width: 95%;
     padding: 0.8rem;
@@ -118,7 +118,7 @@ picture img {
 /* ----------------- LARGE SCREEN ----------------- */
 @media (min-width: 1000px) {
   .info-cards {
-    flex-direction: row;
+    flex-direction: row; /* AREA left, WEATHER right */
     justify-content: space-between;
     width: 80%;
     top: 40px;
@@ -126,16 +126,17 @@ picture img {
   }
 
   /* Hide the original weather img on large screens */
-  .info-cards img {
+  .weather-card img {
     display: none;
   }
 
-  /* Add weather icon as pseudo-element after heading (using emoticon as per instructions) */
-  .info-cards h3::after {
-    content: "⛅";  /* Fixed: Changed from SVG URL to emoticon for wider views */
+  /* Add weather icon as pseudo-element after heading (using emoticon) */
+  .weather-card h3::after {
+    content: "\2601"; /* Fixed: Unicode for cloud emoticon for better rendering */
     display: inline-block;
     margin-left: 0.5rem;
     vertical-align: middle;
-    font-size: 1.5rem;  /* Adjusted for visibility */
+    font-size: 1.5rem;
+    font-family: sans-serif; /* Ensures emoticon renders */
   }
 }

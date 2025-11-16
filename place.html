@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Thailand: A Beautiful Destination</title>  <!-- Updated: More specific and professional title -->
-  <meta name="description" content="Explore Thailand: Learn web design fundamentals with this interactive page on Thailand's geography and weather.">  <!-- Updated: Cleaned up typos and made it professional -->
+  <title>Thailand: A Beautiful Destination</title>
+  <meta name="description" content="Explore Thailand: Learn web design fundamentals with this interactive page on Thailand's geography and weather.">
   <meta name="author" content="Nankya Sandra">
-  <link rel="stylesheet" href="styles/place.css">  <!-- Assuming this is your main CSS file; keep the second link if you have temples-large.css -->
+  <link rel="stylesheet" href="styles/place.css">
   <link rel="stylesheet" href="styles/temples-large.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,32 +26,35 @@
   <img src="images/hero-small.webp" alt="Beautiful temple scene in Thailand">
 </picture>
 
-    <section class="info-cards">  <!-- Fixed: Changed from "infor-cards" to match CSS class -->
-        <!-- the data card -->
-        <h2>AREA</h2>
-         <ul>
-            <li>Area: 513,120km</li>
-            <li>population: 66 million</li>
-            <li>Capital: Bangkok</li>
-            <li>Language: Thai</li>
-            <li>Currency: Thai Baht</li>
-            <li>Time Zone: ICT (indochina time), UTC +7</li>
-            <li>Calling Code: +66</li>
-            <li>Internet TLD: .th</li>
-         </ul>
+    <section class="info-cards">  <!-- Parent container for positioning over hero -->
+        <div class="area-card">  <!-- Separate card for AREA -->
+            <h2>AREA</h2>
+            <ul>
+                <li>Area: 513,120km</li>
+                <li>population: 66 million</li>
+                <li>Capital: Bangkok</li>
+                <li>Language: Thai</li>
+                <li>Currency: Thai Baht</li>
+                <li>Time Zone: ICT (indochina time), UTC +7</li>
+                <li>Calling Code: +66</li>
+                <li>Internet TLD: .th</li>
+            </ul>
+        </div>
 
-        <h3> WEATHER</h3>
-        <img src="images/weather.svg" alt="Cloudy weather icon">  <!-- Updated: Better alt text for accessibility -->
-          <ul>
-            <li>Temperature: 27&degC</li>
-            <li>Conditions: Mostly cloudy</li>
-            <li>Wind: 5km/h</li>  <!-- Updated: Matched to JS windSpeed value -->
-            <li id="windchill">Wind Chill: N/A </li>  <!-- Fixed: ID to lowercase "windchill" to match JS; removed hardcoded "6.5" so JS handles it -->
-          </ul>
+        <div class="weather-card">  <!-- Separate card for WEATHER -->
+            <h3>WEATHER</h3>
+            <img src="images/weather.svg" alt="Cloudy weather icon">
+            <ul>
+                <li>Temperature: 27C</li>
+                <li>Conditions: Mostly cloudy</li>
+                <li>Wind: 1km/h</li>
+                <li id="windchill">Wind Chill: </li>
+            </ul>
+        </div>
     </section>
 </main>
 <footer>
-        <p>&copy; <span id="currentYear"></span> Nankya Sandra, Uganda</p>  <!-- Updated: Removed extra "Thailand" <p> to match instructions (only year and last modified) -->
+    <p>&copy; <span id="currentYear"></span> Nankya Sandra, Thailand</p>
     <p id="lastModified"></p>
 </footer>
 

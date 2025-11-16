@@ -9,10 +9,10 @@ function calculateWindChill(tempC, windSpeedKmh) {
 
 // Static inputs (replace with dynamic later)
 const temperature = 27; // °C
-const windSpeed = 1;    // km/h  // Fixed: Updated to match HTML ("Wind: 1km/h")
+const windSpeed = 1;    // km/h
 
 // Display wind chill
-const windChillElement = document.getElementById('windchill');  // Fixed: Changed to lowercase "windchill" to match HTML ID
+const windChillElement = document.getElementById('windchill');
 
 let windChillDisplay;
 
