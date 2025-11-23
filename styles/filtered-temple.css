@@ -132,7 +132,7 @@ h1 {
   margin: 0 auto 1rem auto;
 }
 
-.temple-card{
+.temple-card h3{
     font-family: var(--heading-font);
     margin-bottom: 0.5rem;
     color: var(--text-color);
