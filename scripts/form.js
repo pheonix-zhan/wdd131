@@ -2,7 +2,7 @@
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
 
-// Product Array
+// Product Array (your custom array)
 const products = [
   { id: 1, name: "Super Drill" },
   { id: 2, name: "Hammer Pro" },
@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   products.forEach(product => {
     const option = document.createElement("option");
-    option.value = product.name;  // value is product name
-    option.textContent = product.name;  // display name
+    option.value = product.id;  // FIXED: Use id as value (matches original requirements)
+    option.textContent = product.name;  // Display name
     productSelect.appendChild(option);
   });
 });
