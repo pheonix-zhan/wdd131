@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>A new form of art</title>
+  <meta name="description" content="Explore Thailand: Learn web design fundamentals with this interactive page on Thailand's geography and weather.">
+  <meta name="author" content="Nankya Sandra">
+  <link rel="stylesheet" href="styles/form.css">
+  <!-- <link rel="stylesheet" href="styles/temples-large.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap" rel="stylesheet">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form action="review.html" method="get">
+
+      <!-- Product Name -->
+      <label for="productName">Product Name:</label>
+      <select id="productName" name="productName" required>
+        <option value="" disabled selected>Select a Product ...</option>
+      </select>
+
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating</legend>
+        <label><input type="radio" name="rating" id="rate1" value="1" required> ☆</label>
+        <label><input type="radio" name="rating" id="rate2" value="2" required> ☆☆</label>
+        <label><input type="radio" name="rating" id="rate3" value="3" required> ☆☆☆</label>
+        <label><input type="radio" name="rating" id="rate4" value="4" required> ☆☆☆☆</label>
+        <label><input type="radio" name="rating" id="rate5" value="5" required> ☆☆☆☆☆</label>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <label for="installDate">Date of Installation:</label>
+      <input type="date" id="installDate" name="installDate" required>
+
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Useful Features</legend>
+        <label><input type="checkbox" id="feature1" name="features" value="Easy Setup"> Easy Setup</label>
+        <label><input type="checkbox" id="feature2" name="features" value="Durable"> Durable</label>
+        <label><input type="checkbox" id="feature3" name="features" value="Energy Efficient"> Energy Efficient</label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <label for="review">Written Review:</label>
+      <textarea id="review" name="review" rows="5"></textarea>
+
+      <!-- User Name -->
+      <label for="userName">Your Name (optional):</label>
+      <input type="text" id="userName" name="userName">
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
+
+  <footer>
+        <p>&copy; <span id="currentYear"></span>🎊✨SandySunshine✨✨ Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

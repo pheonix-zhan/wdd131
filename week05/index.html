@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Fill Me In">
+<meta name="author" content="John Doe">
+
+<!-- This start file was build by Paul Cheney  -->
+<title>HTML5 Start Site by Paul Cheney</title>
+
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+<!-- STYLE SHEETS -->
+<link href="css/normalize.css" rel="stylesheet">
+<!-- phone-default -->
+<link href="css/small.css" rel="stylesheet">
+<!-- enhance-tablet -->
+<link href="css/medium.css" rel="stylesheet">
+<!-- enhance-desktop -->
+<link href="css/large.css" rel="stylesheet">
+
+
+     
+</head>
+<body>
+<!-- HEADER HERE -->
+	<header>
+ <h1>Course Proposal</h1>
+        <h2>Designing Web Forms</h2>
+    </header>
+    
+    
+<!-- NAVIGATION HERE -->
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li class="active"><a href="#">Propose</a></li>
+            <li><a href="#">Winners</a></li>
+            <li><a href="#">Contact</a></li>    
+        </ul>
+    </nav>
+    
+    
+<!-- CONTENT HERE -->
+<main>
+    <h1>Course Proposal Application</h1>
+    <form method="get" action="thanks.html">
+        <fieldset>
+            <legend>Application Information</legend>
+            <lable>First Name*<input type="text" name="fname"required></label>
+            <lable>last Name*<input type="text" name="Lname"required></label>
+            <lable>phone<input type="tel" name="phone" placeholder="123555123"></label>
+            <lable>Email*<input type="email" name="phone"
+            placeholder="someone@gmail.com" required></label>
+            <lable>website<input type="url" name="phone" placeholder="http://"></label>
+        </fieldset>
+        <fieldset>
+            <legend> Course information</legend>
+            <div>audience</div>
+            <lable><input type="radio" name="audience" value="beginner">Beginner</lable>
+            <lable><input type="radio" name="audience" value="intermediate">Intermediate</lable>
+            <lable><input type="radio" name="audience" value="advanced">Advanced</lable>
+
+            <div>Software Needed</div>
+            <lable><input type="checkbox" name="editing" value="yes">Photo Editing</lable>
+            <lable><input type="radio" name="code" value="yes">Coding</lable>
+            <lable><input type="radio" name="process" value="yes">Preprocessor</lable>
+            <lable><input type="radio" name="client" value="yes">FTP Client</lable>
+        </fieldset>
+        <fieldset>
+            <legend>Funding</legend>
+            <label>Anticipated Completion Date <input type="date" name="completeDate"></label>
+            <label>Course Subject
+                <selct name="subject">
+                    <option value="">Please Select</option>
+                    <option value="software">Software developemt</option>
+                    <option value="creative">Creative Proffesional</option>
+                    <option value="info">Information Technology</option>
+                    <option value="data">professiona</option>
+                    <option value="construction">Construction</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="business">Business Proffessional</option>
+                    <option value="security">Cyber security</option>
+                </selct>
+            </label>
+            <label>How many Authors <input type="number" name="Authors"></label>
+        </fieldset>
+        <input type="submit" value="Propse My Course">
+
+
+
+
+
+    </form>      
+        
+    </main>
+    
+<!-- FOOTER HERE -->   
+    <footer>
+        &copy; 2024 &bull; Paul Cheney &bull; 123-555-6789
+    </footer>
+<script src="js/scripts.js"></script>
+</body>
+</html>
