@@ -1,0 +1,518 @@
+/* =========================================
+   CSS VARIABLES
+========================================= */
+:root {
+    --primary-color: #245124;
+    --secondary-color: #4B3621;
+    --accent1-color: #FFFDD0;
+    --accent2-color: #C08081;
+    --highlight-color: #2B6777;
+    --text-color: #000;
+    --heading-font: 'Dancing Script', cursive;
+    --text-font: 'Crimson Text', serif;
+}
+
+/* =========================================
+   RESET & GLOBAL
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--text-font);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--accent1-color);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--accent1-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1{
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+header img {
+    height: 50px;
+    width: auto;
+}
+ h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+.nav-links {
+    position: relative;
+}
+
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.navigation {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--accent1-color);
+    padding: 1rem;
+    min-width: 150px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navigation.active {
+    display: block;
+}
+
+.navigation li {
+    margin: 0.5rem 0;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+}
+
+/* Desktop menu */
+@media(min-width:768px) {
+    .navigation {
+        display: flex !important;
+        position: static;
+        padding: 0;
+        background: none;
+        box-shadow: none;
+    }
+
+    .navigation li {
+        margin: 0 1rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+@media(max-width:768px) {
+    main {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+}
+@media (min-width: 1000px)  {
+    main {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+}
+
+/* =========================================
+   INFO CARDS
+========================================= */
+.info-cards {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-auto-rows: minmax(250px, auto);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-cards figure {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.info-cards figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.info-cards img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.info-cards figcaption {
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    padding: 0.5rem;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+.sidebar {
+    flex: 0 0 300px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.faq {
+    margin-bottom: 1.5rem;
+}
+
+.faq span {
+    font-weight: bold;
+    display: block;
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.big-btn {
+    padding: 20px 40px;
+    background: #6F8F72;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.big-btn:hover {
+    background: #4A6A55;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   HERO BANNER
+========================================= */
+.hero-banner {
+    height: 60vh;
+    background-image: url("../images/catss.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+}
+
+.banner-text {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+}
+/* =========================================
+   COFFEE MENU TABLE
+========================================= */
+
+/* Table base styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-family: var(--text-font);
+    background-color: var(--accent1-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Table caption */
+table caption {
+    caption-side: top;
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Header styling */
+thead th {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+thead th.reader-roast {
+    text-align: center;
+}
+
+/* Table body rows */
+tbody tr {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: rgba(111, 143, 114, 0.1);
+}
+
+/* Table cells */
+td {
+    padding: 12px 15px;
+    font-size: 1rem;
+    vertical-align: top;
+}
+
+/* Special style for Reader's Roast column */
+td.reader-roast {
+    text-align: center;
+    font-style: italic;
+    color: var(--highlight-color);
+}
+
+/* Strong coffee names */
+td strong {
+    color: var(--primary-color);
+}
+
+/* Responsive Table for smaller screens */
+@media(max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 1rem;
+        border: 2px solid var(--accent2-color);
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    td {
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex: 1;
+        color: var(--secondary-color);
+    }
+
+    td.reader-roast {
+        text-align: left;
+        font-style: italic;
+        color: var(--highlight-color);
+    }
+}
+
+
+/* =========================================
+   SHARED FANTASY FORM DESIGN
+========================================= */
+.fantasy-form {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #f8f4ec; /* soft cream */
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    font-family: var(--text-font);
+}
+
+.fantasy-form fieldset {
+    border: 2px solid var(--secondary-color);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.fantasy-form legend {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.fantasy-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.fantasy-form input[type="text"],
+.fantasy-form input[type="tel"],
+.fantasy-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border: 1px solid #c0a98e;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.fantasy-form input:focus {
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 5px rgba(43,103,119,0.4);
+}
+
+.fantasy-form input[type="submit"] {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background: var(--primary-color);
+    color: var(--accent1-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fantasy-form input[type="submit"]:hover {
+    background: var(--highlight-color);
+    transform: scale(1.05);
+}
+
+/* =====================================================
+   FOOTER CONTACT DETAILS (CUSTOM — MATCHES TEAS & TALES)
+===================================================== */
+
+footer .contact-details {
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+
+footer .contact-details h2 {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent2-color);
+}
+
+/* GRID LAYOUT FOR CONTACT ITEMS */
+footer .contact-details .info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+/* Remove the big card styling ONLY in footer */
+footer .contact-details figure {
+    background: var(--accent1-color);
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* Small icons that match your design */
+footer .contact-details img {
+    width: 40px;
+    height: auto;
+    opacity: 0.95;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+}
+
+/* Caption styled to match footer colors */
+footer .contact-details figcaption {
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    color: var(--accent1-color);
+    font-family: var(--text-font);
+    line-height: 1.2;
+    text-align: center;
+}
+
+

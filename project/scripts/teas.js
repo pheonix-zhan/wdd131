@@ -1,5 +1,3 @@
-// scripts/siteplan.js
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // ---------------------------
@@ -10,9 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuButton.addEventListener('click', () => {
         navigation.classList.toggle('active');
+
         // Update aria-expanded for accessibility
         const expanded = menuButton.getAttribute('aria-expanded') === 'true';
         menuButton.setAttribute('aria-expanded', !expanded);
+    });
+
+    // Close menu when a link is clicked (mobile)
+    const navLinks = document.querySelectorAll('.navigation a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navigation.classList.contains('active')) {
+                navigation.classList.remove('active');
+                menuButton.setAttribute('aria-expanded', false);
+            }
+        });
     });
 
     // ---------------------------
@@ -34,14 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     images.forEach(img => {
-        // Use data-src for lazy loading if not already set
         if (!img.dataset.src) {
             img.dataset.src = img.src;
-            img.src = 'images/placeholder.jpg'; // Placeholder image
+            img.src = 'images/placeholder.jpg';
             img.classList.add('lazy');
         }
-
-        // Observe each image for lazy loading
         imageObserver.observe(img);
     });
 
@@ -53,18 +60,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
     if (lastModifiedEl) lastModifiedEl.textContent = `Last Modified: ${document.lastModified}`;
-
-    // ---------------------------
-    // 4. Smooth Scroll (Optional Enhancement)
-    // ---------------------------
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
-    internalLinks.forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').slice(1);
-            const targetEl = document.getElementById(targetId);
-            if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
 
 });
