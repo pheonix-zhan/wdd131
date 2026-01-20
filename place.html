@@ -2,61 +2,63 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Thailand: A Beautiful Destination</title>
-  <meta name="description" content="Explore Thailand: Learn web design fundamentals with this interactive page on Thailand's geography and weather.">
-  <meta name="author" content="Nankya Sandra">
-  <link rel="stylesheet" href="styles/place.css">
-  <link rel="stylesheet" href="styles/temples-large.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap" rel="stylesheet">
-  <script src="scripts/place.js" defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Thailand: A Beautiful Destination</title>
+    <meta name="description"
+        content="Explore Thailand: Learn web design fundamentals with this interactive page on Thailand's geography and weather.">
+    <meta name="author" content="Nankya Sandra">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
 
-<header>Thailand</header>
+    <header>Thailand</header>
 
-<main>
-<picture>
-  <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
-  <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
-  <img src="images/hero-small.webp" alt="Beautiful temple scene in Thailand">
-</picture>
+    <main>
+        <picture>
+            <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+            <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+            <img src="images/hero-small.webp" alt="Beautiful temple scene in Thailand">
+        </picture>
 
-    <section class="info-cards">  <!-- Parent container for positioning over hero -->
-        <div class="area-card">  <!-- Separate card for AREA -->
-            <h1>AREA</h1>
-            <ul>
-                <li>Area: 513,120km</li>
-                <li>population: 66 million</li>
-                <li>Capital: Bangkok</li>
-                <li>Language: Thai</li>
-                <li>Currency: Thai Baht</li>
-                <li>Time Zone: ICT (indochina time), UTC +7</li>
-                <li>Calling Code: +66</li>
-                <li>Internet TLD: .th</li>
-            </ul>
-        </div>
+        <section class="info-cards"> <!-- Parent container for positioning over hero -->
+            <div class="area-card"> <!-- Separate card for AREA -->
+                <h1>AREA</h1>
+                <ul>
+                    <li>Area: 513,120km</li>
+                    <li>population: 66 million</li>
+                    <li>Capital: Bangkok</li>
+                    <li>Language: Thai</li>
+                    <li>Currency: Thai Baht</li>
+                    <li>Time Zone: ICT (indochina time), UTC +7</li>
+                    <li>Calling Code: +66</li>
+                    <li>Internet TLD: .th</li>
+                </ul>
+            </div>
 
-        <div class="weather-card">  <!-- Separate card for WEATHER -->
-            <h2>WEATHER</h2>
-            <img src="images/weather.svg" alt="Cloudy weather icon">
-            <ul>
-                <li>Temperature: 27C</li>
-                <li>Conditions: Mostly cloudy</li>
-                <li>Wind: 1km/h</li>
-                <li id="windchill">Wind Chill: </li>
-            </ul>
-        </div>
-    </section>
-</main>
-<footer>
-    <p>&copy; <span id="currentYear"></span> Nankya Sandra, Thailand</p>
-    <p id="lastModified"></p>
-</footer>
+            <div class="weather-card"> <!-- Separate card for WEATHER -->
+                <h2>WEATHER</h2>
+                <img src="images/weather.svg" alt="Cloudy weather icon">
+                <ul>
+                    <li>Temperature: 27C</li>
+                    <li>Conditions: Mostly cloudy</li>
+                    <li>Wind: 1km/h</li>
+                    <li id="windchill">Wind Chill: </li>
+                </ul>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Nankya Sandra, Thailand</p>
+        <p id="lastModified"></p>
+    </footer>
 
 </body>
 
